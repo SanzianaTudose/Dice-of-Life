@@ -10,18 +10,28 @@ public class CountGuessManager : MonoBehaviour {
     [SerializeField] protected float rhythm;
     [SerializeField] protected int[] numbers;
 
+    [Header("Dependencies")]
+    #region UI Vars
+    [SerializeField] protected TMP_Text numberText;
+    #endregion
+
+    #region Sound Vars
+    protected AudioSource audioSource;
+    [SerializeField] protected AudioClip rythmClickClip;
+    #endregion
+
+    #region Logic Vars
     // Game state vars
     private bool gameStarted = false;
     private bool gameOver = false;
 
     protected int curNumberInd;
-
-    #region UI Vars
-    [SerializeField] protected TMP_Text numberText;
     #endregion
 
     private void Awake() {
         numberText.text = "";
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected virtual void Update() {
@@ -54,13 +64,15 @@ public class CountGuessManager : MonoBehaviour {
         curNumberInd = (curNumberInd + 1) % numbers.Length; 
         
         DisplayNumber();
-        // TODO: Play rhythm sound.
+        PlayRythmClick();
     }
 
     private void OnNumberChosen() {
         gameOver = true;
 
         Debug.Log("The chosen number is: " + numbers[curNumberInd]);
+        // TODO: Display chosen number in some way.
+        // TODO: Go to next scene.
     }
 
     #region UI Methods
@@ -70,6 +82,8 @@ public class CountGuessManager : MonoBehaviour {
     #endregion
 
     #region Sound Methods
-        // TODO: Add method to play rythm sound.
+    private void PlayRythmClick() {
+        audioSource.PlayOneShot(rythmClickClip);
+    }
     #endregion
 }
