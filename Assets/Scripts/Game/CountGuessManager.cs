@@ -13,6 +13,10 @@ public class CountGuessManager : MonoBehaviour {
     [Header("Dependencies")]
     #region UI Vars
     [SerializeField] protected TMP_Text numberText;
+
+    [SerializeField] private GameObject dicePopupPrefab;
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private Vector3 dicePopupPos;
     #endregion
 
     #region Sound Vars
@@ -75,7 +79,8 @@ public class CountGuessManager : MonoBehaviour {
         gameOver = true;
 
         finalNumber = numbers[curNumberInd];
-        // TODO: Display chosen number for die side
+        DisplayDicePopup();
+
         // TODO: Keep track of final numbers for the final die!
     }
 
@@ -86,6 +91,12 @@ public class CountGuessManager : MonoBehaviour {
 
     protected void DisplayEmpty() {
         numberText.text = "";
+    }
+
+    private void DisplayDicePopup() {
+        GameObject popup = Instantiate(dicePopupPrefab, dicePopupPos, Quaternion.identity);
+        popup.transform.SetParent(canvas.transform, false);
+        popup.GetComponent<DieFacePopup>().Initialize(finalNumber);
     }
     #endregion
 

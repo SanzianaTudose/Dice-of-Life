@@ -171,6 +171,9 @@ MonoBehaviour:
   rhythm: 1
   numbers: 010000000200000003000000040000000500000006000000
   numberText: {fileID: 1088478085}
+  dicePopupPrefab: {fileID: 1855776500340807357, guid: acc3ad0dac35f2340bcfae525c48ec9d, type: 3}
+  canvas: {fileID: 2042847409}
+  dicePopupPos: {x: 0, y: 0, z: 0}
   rythmClickClip: {fileID: 8300000, guid: b491e987e4a3f434390ec501aad2f6d9, type: 3}
 --- !u!82 &88179908
 AudioSource:
@@ -359,6 +362,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2042847413}
     m_Modifications:
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontSize
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 130
+      objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187781, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_Name
       value: Number
@@ -393,11 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 279.7871
+      value: 201.1106
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 279.787
+      value: 180.8794
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -429,11 +440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 35
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 52.5684
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -697,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

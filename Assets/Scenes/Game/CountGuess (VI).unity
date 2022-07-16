@@ -351,9 +351,9 @@ MonoBehaviour:
   rows:
   - {fileID: 720468850}
   - {fileID: 978988659}
-  diePopupPrefab: {fileID: 1855776500340807357, guid: acc3ad0dac35f2340bcfae525c48ec9d, type: 3}
+  dicePopupPrefab: {fileID: 1855776500340807357, guid: acc3ad0dac35f2340bcfae525c48ec9d, type: 3}
   canvas: {fileID: 1911045011}
-  diePopupPos: {x: -49, y: 34, z: 0}
+  dicePopupPos: {x: 0, y: 0, z: 0}
 --- !u!1 &391232188
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
