@@ -47,6 +47,9 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+!/[Aa]ssets/**/*.meta
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
