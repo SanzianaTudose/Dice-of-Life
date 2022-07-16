@@ -29,6 +29,8 @@ public class CountGuessManager : MonoBehaviour {
     protected int curNumberInd;
     #endregion
 
+    protected int finalNumber;
+
     private void Awake() {
         DisplayEmpty();
         audioSource = GetComponent<AudioSource>();
@@ -72,9 +74,8 @@ public class CountGuessManager : MonoBehaviour {
     private void OnNumberChosen() {
         gameOver = true;
 
-        Debug.Log("The chosen number is: " + numbers[curNumberInd]);
-        // TODO: Display chosen number in some way.
-        // TODO: Go to next scene.
+        finalNumber = numbers[curNumberInd];
+        // TODO: Display chosen number
     }
 
     #region UI Methods

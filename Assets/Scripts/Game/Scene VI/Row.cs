@@ -13,12 +13,12 @@ public class Row : MonoBehaviour {
     [SerializeField] private float rotSpeed;
     [SerializeField] private int rotDir;
     [SerializeField] private float[] symbolPosY; 
-    [SerializeField] private string[] symbolString; 
-    
-    public bool rowStopped;
+    [SerializeField] private string[] symbolString;
+
     public string finalSymbol;
-    
+
     private int closestInd;
+    private bool rowStopped;
 
     private void Start() {
         rowStopped = true;
