@@ -17,8 +17,8 @@ public class Row : MonoBehaviour {
     
     public bool rowStopped;
     public string finalSymbol;
-
-    private int rotCount;
+    
+    private int closestInd;
 
     private void Start() {
         rowStopped = true;
@@ -44,8 +44,6 @@ public class Row : MonoBehaviour {
 
         // One loop gives one rotation
         while(!rowStopped) {
-            rotCount++;
-            
             RotateOnce();
 
             yield return new WaitForSeconds(rotInterval);
@@ -67,7 +65,7 @@ public class Row : MonoBehaviour {
 
         // Find symbol that is closest to the stopped position
         float minDist = MAX_DIST;
-        int closestInd = -1;
+        closestInd = -1;
         for (int i = 0; i < symbolPosY.Length; i++) {
             float dist = Mathf.Abs(transform.position.y - symbolPosY[i]);
 
@@ -81,7 +79,7 @@ public class Row : MonoBehaviour {
     }
 
     private void MoveToClosestSymbol() {
-
+        LeanTween.moveY(gameObject, symbolPosY[closestInd], 0.5f);
     }
     #endregion
 }

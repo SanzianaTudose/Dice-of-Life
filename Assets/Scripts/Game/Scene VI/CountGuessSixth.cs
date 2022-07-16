@@ -24,7 +24,9 @@ public class CountGuessSixth : MonoBehaviour {
 
             StopGame();
 
-            gameStarted = false;
+            Debug.Log(rows[0].finalSymbol + rows[1].finalSymbol);
+            
+            // TODO: Determine final number
         }
     }
 }
