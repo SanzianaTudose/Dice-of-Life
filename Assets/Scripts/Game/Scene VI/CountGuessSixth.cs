@@ -13,6 +13,12 @@ public class CountGuessSixth : MonoBehaviour {
     [SerializeField] private Row[] rows;
     private int finalNumber;
 
+    #region UI Vars
+    [SerializeField] private GameObject diePopupPrefab;
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private Vector3 diePopupPos;
+    #endregion
+
     private void Update() {
         // Handle player input
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -23,12 +29,10 @@ public class CountGuessSixth : MonoBehaviour {
                 return;
             }
 
-            gameStarted = false;
             StopGame();
+            
             DetermineFinalNumber();
-           
-            // TODO: Display chosen number for die side
-            Debug.Log(finalNumber);
+            DisplayDiePopup();
         }
     }
 
@@ -55,5 +59,11 @@ public class CountGuessSixth : MonoBehaviour {
                 finalNumber = 1;
                 break;
         }
+    }
+
+    private void DisplayDiePopup() {
+        GameObject popup = Instantiate(diePopupPrefab, diePopupPos, Quaternion.identity);
+        popup.transform.SetParent(canvas.transform, false);
+        popup.GetComponent<DieFacePopup>().Initialize(finalNumber);
     }
 }

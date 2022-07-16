@@ -75,7 +75,8 @@ public class CountGuessManager : MonoBehaviour {
         gameOver = true;
 
         finalNumber = numbers[curNumberInd];
-        // TODO: Display chosen number
+        // TODO: Display chosen number for die side
+        // TODO: Keep track of final numbers for the final die!
     }
 
     #region UI Methods
