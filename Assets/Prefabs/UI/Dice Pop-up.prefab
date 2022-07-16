@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0bc013b1555e14faaf45dc5b947df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animTime: 1
-  delay: 0.8
+  animTime: 0.7
+  delay: 0.5
   dieFace: {fileID: 1855776502181337579}
   sparkles: {fileID: 1855776501701441744}
   dieFaceSprites:

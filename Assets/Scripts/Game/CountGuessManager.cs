@@ -43,12 +43,10 @@ public class CountGuessManager : MonoBehaviour {
     protected virtual void Update() {
         // Handle player input
         if (Input.GetKeyDown(KeyCode.Space)) {
-            if (!gameStarted) {
+            if (!gameStarted) 
                 StartGame();
-                return;
-            }
-            
-            OnNumberChosen();
+            else if (!gameOver) 
+                OnNumberChosen();
         }
     }
 
