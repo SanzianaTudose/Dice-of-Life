@@ -23,7 +23,8 @@ public class CountGuessManager : MonoBehaviour {
     #region Logic Vars
     // Game state vars
     private bool gameStarted = false;
-    private bool gameOver = false;
+    protected bool gameOver = false;
+    protected bool isFirstRound = true;
 
     protected int curNumberInd;
     #endregion
@@ -49,10 +50,10 @@ public class CountGuessManager : MonoBehaviour {
         gameStarted = true;
 
         curNumberInd = -1;
-        StartCoroutine(RhythmCountdown());  
+        StartCoroutine(CoRhythmCountdown());  
     }
 
-    protected virtual IEnumerator RhythmCountdown() {
+    protected virtual IEnumerator CoRhythmCountdown() {
         while (!gameOver) {
             OnNumberChanged();
             yield return new WaitForSeconds(rhythm);
@@ -60,8 +61,10 @@ public class CountGuessManager : MonoBehaviour {
     }
 
     protected virtual void OnNumberChanged() {
-        curNumberInd = (curNumberInd + 1) % numbers.Length; 
-        
+        curNumberInd = (curNumberInd + 1) % numbers.Length;
+        if (curNumberInd == numbers.Length - 1)
+            isFirstRound = false;
+
         DisplayNumber();
         PlayRythmClick();
     }
@@ -85,7 +88,7 @@ public class CountGuessManager : MonoBehaviour {
     #endregion
 
     #region Sound Methods
-    protected void PlayRythmClick() {
+    protected virtual void PlayRythmClick() {
         audioSource.PlayOneShot(rythmClickClip);
     }
     #endregion
