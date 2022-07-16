@@ -302,6 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25a4fab0d5112745bcaa36218be6a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rhythm: 1
+  numbers: 010000000200000003000000040000000500000006000000
+  numberText: {fileID: 20737995}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
