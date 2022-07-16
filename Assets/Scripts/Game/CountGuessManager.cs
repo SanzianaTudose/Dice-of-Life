@@ -29,8 +29,7 @@ public class CountGuessManager : MonoBehaviour {
     #endregion
 
     private void Awake() {
-        numberText.text = "";
-
+        DisplayEmpty();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -76,13 +75,17 @@ public class CountGuessManager : MonoBehaviour {
     }
 
     #region UI Methods
-    private void DisplayNumber() {
+    protected void DisplayNumber() {
         numberText.text = numbers[curNumberInd].ToString();
+    }
+
+    protected void DisplayEmpty() {
+        numberText.text = "";
     }
     #endregion
 
     #region Sound Methods
-    private void PlayRythmClick() {
+    protected void PlayRythmClick() {
         audioSource.PlayOneShot(rythmClickClip);
     }
     #endregion
