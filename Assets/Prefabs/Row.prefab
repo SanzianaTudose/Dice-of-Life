@@ -101,5 +101,16 @@ MonoBehaviour:
   posUpperY: -4.6
   posLowerY: 4.36
   rotSpeed: 0.2
+  rotDir: 0
+  symbolPosY:
+  - -4.56
+  - -1.7
+  - 1.24
+  - 4.33
+  symbolString:
+  - I
+  - V
+  - 
+  - I
   rowStopped: 0
   curSlotItem: 
