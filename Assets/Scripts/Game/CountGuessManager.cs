@@ -78,7 +78,7 @@ public class CountGuessManager : MonoBehaviour {
     }
 
     #region UI Methods
-    protected void DisplayNumber() {
+    protected virtual void DisplayNumber() {
         numberText.text = numbers[curNumberInd].ToString();
     }
 
