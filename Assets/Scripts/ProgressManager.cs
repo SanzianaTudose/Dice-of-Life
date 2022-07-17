@@ -45,23 +45,14 @@ public class ProgressManager : MonoBehaviour {
             return;
         }
 
-        if(curScene.buildIndex==15)
-        {
-            Debug.Log("scene ending");
-            musicManager.ChangeBGM(musicManager.endTheme);
-        }
-        if (curScene.buildIndex == 19)
-        {
-            Debug.Log("scene bad end");
-            musicManager.ChangeBGM(musicManager.badEndMusic);
-        }
-        if (curScene.buildIndex == 20)
-        {
-            Debug.Log("scene good end");
-            musicManager.ChangeBGM(musicManager.goodEndMusic);
-        }
+        HandleChangingMusic(curScene);
 
         FadeOut(curScene);
+
+        // TODO: if (SceneManager.GetActiveScene().name == "5_PetruDecision")
+        // determine roll based on Dice of Life
+
+        // TODO: daca e last scene => restart whole game
     }
 
     #region UI Methods
@@ -80,4 +71,15 @@ public class ProgressManager : MonoBehaviour {
     }
     #endregion
 
+    private void HandleChangingMusic(Scene curScene) {
+        if (curScene.buildIndex == 15) {
+            musicManager.ChangeBGM(musicManager.endTheme);
+        }
+        if (curScene.buildIndex == 19) {
+            musicManager.ChangeBGM(musicManager.badEndMusic);
+        }
+        if (curScene.buildIndex == 20) {
+            musicManager.ChangeBGM(musicManager.goodEndMusic);
+        }
+    }
 }
