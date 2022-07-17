@@ -263,7 +263,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.454
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f504d96aa66694f8760d9961848c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rhythm: 1
+  rhythm: 0.7
   numbers: 010000000200000003000000040000000500000006000000
   numberText: {fileID: 20737995}
   dicePopupPrefab: {fileID: 1855776500340807357, guid: acc3ad0dac35f2340bcfae525c48ec9d, type: 3}
@@ -1042,7 +1042,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_fontSize
-      value: 20
+      value: 150.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.5338303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.024207853
       objectReference: {fileID: 0}
     - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_fontSizeMax
@@ -1055,6 +1067,10 @@ PrefabInstance:
     - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_enableAutoSizing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290807814
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187781, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_Name
@@ -1126,11 +1142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 28
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

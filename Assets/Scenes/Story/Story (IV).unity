@@ -418,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_fontSize
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_fontSizeMin
@@ -426,11 +426,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_fontSizeBase
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
@@ -825,7 +829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e17d6356b3956134493e2ee6c34084a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c6ec2253d05dea42b33790a5347a07c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
