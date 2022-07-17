@@ -263,7 +263,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.454
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f504d96aa66694f8760d9961848c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rhythm: 1
+  rhythm: 0.7
   numbers: 010000000200000003000000040000000500000006000000
   numberText: {fileID: 20737995}
   dicePopupPrefab: {fileID: 1855776500340807357, guid: acc3ad0dac35f2340bcfae525c48ec9d, type: 3}
