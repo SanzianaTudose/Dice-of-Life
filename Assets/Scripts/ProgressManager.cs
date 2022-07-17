@@ -22,13 +22,6 @@ public class ProgressManager : MonoBehaviour {
 
         SetCanProgress(false);
         FadeIn();
-
-        // TODO: For now, Story Scenes can be skipped without doing anything.
-        // REMOVE THIS when DialogueManager is a thing!
-        Scene curScene = SceneManager.GetActiveScene();
-        int buildInd = curScene.buildIndex;
-        if (buildInd % 2 == 1 || buildInd == 0)
-            SetCanProgress(true);
     }
 
     private void Update() {
