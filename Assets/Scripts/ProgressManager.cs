@@ -45,6 +45,8 @@ public class ProgressManager : MonoBehaviour {
         }
 
         FadeOut(curScene);
+        // TODO: if (SceneManager.GetActiveScene().name == "5_PetruDecision")
+        // determine roll based on Dice of Life
     }
 
     #region UI Methods

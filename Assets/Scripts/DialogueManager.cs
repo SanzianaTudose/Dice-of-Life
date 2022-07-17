@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Events;
 
 // Handles UI for Dialogue and notifies ProgressManager when Dialogue is done
 public class DialogueManager : MonoBehaviour {
@@ -13,6 +15,8 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> dialogue;
     
     private ProgressManager progressManager;
+
+    [SerializeField] private UnityEvent OnDialogueEnd;
 
     #region UI Vars
     [SerializeField] private float typeWaitTime;
@@ -80,6 +84,12 @@ public class DialogueManager : MonoBehaviour {
 
     private IEnumerator CoEndDialogue() {
         yield return null;
+
+        OnDialogueEnd?.Invoke();
+
+        if (SceneManager.GetActiveScene().name == "5_PetruDecision")
+            yield break;
+
         progressManager.SetCanProgress(true);
     }
 }
