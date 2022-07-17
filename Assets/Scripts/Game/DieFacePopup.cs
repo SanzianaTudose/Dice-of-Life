@@ -6,6 +6,9 @@ using UnityEngine.UI;
 // Handles movement and animation
 // Notifies ProgressManager that Scene can now be progressed
 public class DieFacePopup : MonoBehaviour {
+    private const string FACE_COUNT = "FACE_COUNT";
+    private const string FACE_VAL = "FACE_VAL";
+
     [Header("Properties")]
     [SerializeField] private float animTime;
     [SerializeField] private float delay;
@@ -19,6 +22,8 @@ public class DieFacePopup : MonoBehaviour {
     private ProgressManager progressManager;
 
     public void Initialize(int finalNumber) {
+        SaveFinalFaceNumber(finalNumber);
+
         // Set correct die face sprite
         dieFace.GetComponent<Image>().sprite = dieFaceSprites[finalNumber - 1];
 
@@ -49,5 +54,15 @@ public class DieFacePopup : MonoBehaviour {
 
     private void NotifyProgressManager() {
         progressManager.SetCanProgress(true);
+    }
+
+    private void SaveFinalFaceNumber(int finalNumber) {
+        int count = 1;
+        if (PlayerPrefs.HasKey(FACE_COUNT))
+            count = PlayerPrefs.GetInt(FACE_COUNT) + 1;
+
+        PlayerPrefs.SetInt(FACE_COUNT, count);
+        PlayerPrefs.SetInt(FACE_VAL + count.ToString(), finalNumber);
+        PlayerPrefs.Save();
     }
 }
