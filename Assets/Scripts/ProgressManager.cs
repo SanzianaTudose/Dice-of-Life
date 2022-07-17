@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class ProgressManager : MonoBehaviour {
     // Set to true when next Scene can be loaded
     private bool canProgress;
+    MusicManager musicManager;
 
     #region UI Vars
     [SerializeField] private float fadeAnimTime;
@@ -19,7 +20,7 @@ public class ProgressManager : MonoBehaviour {
     private void Start() {
         canProgressText = GameObject.Find("ProgressText");
         transitionPanel = GameObject.Find("SceneTransitionPanel");
-
+        musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
         SetCanProgress(false);
         FadeIn();
     }
@@ -42,6 +43,22 @@ public class ProgressManager : MonoBehaviour {
         if (curScene.buildIndex + 1 >= SceneManager.sceneCountInBuildSettings) {
             Debug.LogError("ProgressManager: There's no next scene!");
             return;
+        }
+
+        if(curScene.buildIndex==15)
+        {
+            Debug.Log("scene ending");
+            musicManager.ChangeBGM(musicManager.endTheme);
+        }
+        if (curScene.buildIndex == 19)
+        {
+            Debug.Log("scene bad end");
+            musicManager.ChangeBGM(musicManager.badEndMusic);
+        }
+        if (curScene.buildIndex == 20)
+        {
+            Debug.Log("scene good end");
+            musicManager.ChangeBGM(musicManager.goodEndMusic);
         }
 
         FadeOut(curScene);
