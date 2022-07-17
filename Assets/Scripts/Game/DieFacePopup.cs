@@ -23,6 +23,9 @@ public class DieFacePopup : MonoBehaviour {
 
     public void Initialize(int finalNumber) {
         SaveFinalFaceNumber(finalNumber);
+        
+        dieFace.SetActive(true);
+        sparkles.SetActive(true);
 
         // Set correct die face sprite
         dieFace.GetComponent<Image>().sprite = dieFaceSprites[finalNumber - 1];

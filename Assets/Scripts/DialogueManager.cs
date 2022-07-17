@@ -87,7 +87,8 @@ public class DialogueManager : MonoBehaviour {
 
         OnDialogueEnd?.Invoke();
 
-        if (SceneManager.GetActiveScene().name == "5_PetruDecision")
+        if (SceneManager.GetActiveScene().name == "5_PetruDecision" ||
+             SceneManager.GetActiveScene().name == "4_Elder")
             yield break;
 
         progressManager.SetCanProgress(true);
