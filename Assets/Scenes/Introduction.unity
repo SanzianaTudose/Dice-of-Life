@@ -801,6 +801,8 @@ MonoBehaviour:
   BGM: {fileID: 1798111192}
   mainTheme: {fileID: 8300000, guid: 48f312398f67c00418f6e6d8a5a3d146, type: 3}
   endTheme: {fileID: 8300000, guid: 6cfe1d733567d9d4ea6910e4b551aec6, type: 3}
+  goodEndMusic: {fileID: 8300000, guid: d90f1e4e755c6304b92b6ea4fa3b6455, type: 3}
+  badEndMusic: {fileID: 8300000, guid: 236e2a78cdbb95b469dfb0fa632240bf, type: 3}
 --- !u!1001 &1956957176000529067
 PrefabInstance:
   m_ObjectHideFlags: 0
