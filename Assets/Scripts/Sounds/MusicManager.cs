@@ -23,6 +23,5 @@ public class MusicManager : MonoBehaviour
         BGM.Stop();
         BGM.clip = music;
         BGM.Play();
-        Debug.Log("music changed");
     }
 }
