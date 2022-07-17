@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PetruDecisionController : MonoBehaviour {
+    private const string FINAL_ROLL = "FINAL_ROLL";
     private int finalRoll;
 
     #region UI Vars
@@ -12,13 +13,9 @@ public class PetruDecisionController : MonoBehaviour {
     #endregion
 
     private void Start() {
-        DetermineRoll();
+        finalRoll = PlayerPrefs.GetInt(FINAL_ROLL);
     }
 
-    private void DetermineRoll() {
-        // TODO: determine roll based on Dice of Life
-        finalRoll = 6;
-    }
     public void DisplayDicePopup() {
         GameObject popup = Instantiate(dicePopupPrefab, dicePopupPos, Quaternion.identity);
         popup.transform.SetParent(dicePopupParent.transform, false);

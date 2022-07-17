@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         BGM.clip = mainTheme;
+        PlayerPrefs.DeleteAll();
     }
 
     public void ChangeBGM(AudioClip music)

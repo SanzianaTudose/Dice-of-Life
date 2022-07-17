@@ -78,8 +78,6 @@ public class CountGuessManager : MonoBehaviour {
 
         finalNumber = numbers[curNumberInd];
         DisplayDicePopup();
-
-        // TODO: Keep track of final numbers for the final die!
     }
 
     #region UI Methods

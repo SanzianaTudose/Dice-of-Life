@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProgressText
       objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058897, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4392436350653058898, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -169,6 +173,18 @@ PrefabInstance:
     - target: {fileID: 4392436350653058898, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
       propertyPath: m_SizeDelta.y
       value: 13.2511
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058898, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058898, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058898, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4392436350653058898, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
       propertyPath: m_LocalPosition.x
