@@ -513,13 +513,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2042847413}
     m_Modifications:
-    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
-      propertyPath: m_fontSize
-      value: 130
+    - target: {fileID: 4413032397368975942, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 130
+    - target: {fileID: 4413032397368975942, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187781, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_Name

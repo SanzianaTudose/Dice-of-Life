@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_fontSize
-      value: 15
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_fontSizeMin
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_fontSizeBase
-      value: 15
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_enableAutoSizing

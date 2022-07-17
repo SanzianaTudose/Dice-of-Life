@@ -1042,7 +1042,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_fontSize
-      value: 20
+      value: 150.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.5338303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.024207853
       objectReference: {fileID: 0}
     - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_fontSizeMax
@@ -1055,6 +1067,10 @@ PrefabInstance:
     - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_enableAutoSizing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413032397368975943, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290807814
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187781, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_Name
@@ -1126,11 +1142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 28
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4413032398802187782, guid: 37b4dd94f1810394eb3141e2aab96a7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
