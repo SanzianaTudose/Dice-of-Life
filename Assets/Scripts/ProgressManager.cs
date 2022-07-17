@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 // Loads and manages Scenes
 // Handles UI for Scene Transition
 public class ProgressManager : MonoBehaviour {
+    private const string FINAL_ROLL = "FINAL_ROLL";
+
     // Set to true when next Scene can be loaded
     private bool canProgress;
     MusicManager musicManager;
@@ -47,10 +49,16 @@ public class ProgressManager : MonoBehaviour {
 
         HandleChangingMusic(curScene);
 
-        FadeOut(curScene);
+        // Determine and load ENDING Scene
+        if (SceneManager.GetActiveScene().name == "5_PetruDecision") {
+            int finalRoll = PlayerPrefs.GetInt(FINAL_ROLL);
+            if (finalRoll == 6) FadeOut(curScene, 21);
+            else FadeOut(curScene, 20);
 
-        // TODO: if (SceneManager.GetActiveScene().name == "5_PetruDecision")
-        // determine roll based on Dice of Life
+            return;
+        }
+
+        FadeOut(curScene, curScene.buildIndex + 1);
 
         // TODO: daca e last scene => restart whole game
     }
@@ -62,11 +70,11 @@ public class ProgressManager : MonoBehaviour {
         LeanTween.alphaCanvas(canvasGroup, 0f, fadeAnimTime); // TODO: setEase ?
     }
 
-    private void FadeOut(Scene curScene) {
+    private void FadeOut(Scene curScene, int indexSceneToLoad) {
         CanvasGroup canvasGroup = transitionPanel.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
         LeanTween.alphaCanvas(canvasGroup, 1f, fadeAnimTime)
-                 .setOnComplete(() => { SceneManager.LoadScene(curScene.buildIndex + 1); }); 
+                 .setOnComplete(() => { SceneManager.LoadScene(indexSceneToLoad); }); 
         // TODO: setEase ?
     }
     #endregion
