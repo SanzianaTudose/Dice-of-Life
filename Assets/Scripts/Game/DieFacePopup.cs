@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Handles movement and animation
+// Notifies ProgressManager that Scene can now be progressed
 public class DieFacePopup : MonoBehaviour {
     [Header("Properties")]
     [SerializeField] private float animTime;
@@ -15,6 +16,8 @@ public class DieFacePopup : MonoBehaviour {
     private Image sparklesImage;
     [SerializeField] private Sprite[] dieFaceSprites;
 
+    private ProgressManager progressManager;
+
     public void Initialize(int finalNumber) {
         // Set correct die face sprite
         dieFace.GetComponent<Image>().sprite = dieFaceSprites[finalNumber - 1];
@@ -23,19 +26,28 @@ public class DieFacePopup : MonoBehaviour {
         dieFace.transform.localScale = Vector3.zero;
         LeanTween.scale(dieFace, Vector3.one, animTime)
                  .setEase(LeanTweenType.easeOutBack)
-                 .setDelay(delay); ;
+                 .setDelay(delay)
+                 .setOnComplete(NotifyProgressManager); 
 
         // Animate {sparkles} sprite alpha
         sparklesImage = sparkles.GetComponent<Image>();
         sparklesImage.color = new Color(sparklesImage.color.r, sparklesImage.color.g, sparklesImage.color.b, 0f);
-        LeanTween.value(sparkles, updateAlphaCallback, 0f, 1f, animTime * 0.5f).setDelay(delay);
+        LeanTween.value(sparkles, UpdateAlphaCallback, 0f, 1f, animTime * 0.5f).setDelay(delay);
 
-        LeanTween.value(sparkles, updateAlphaCallback, 1f, 0f, animTime * 0.5f).setDelay(delay + animTime * 1.5f);
+        LeanTween.value(sparkles, UpdateAlphaCallback, 1f, 0f, animTime * 0.5f).setDelay(delay + animTime * 1.5f);
 
         // TODO: Add SFX!
     }
 
-    private void updateAlphaCallback(float val) {
+    private void Start() {
+        progressManager = GameObject.Find("ProgressManager").GetComponent<ProgressManager>();
+    }
+
+    private void UpdateAlphaCallback(float val) {
         sparklesImage.color = new Color(sparklesImage.color.r, sparklesImage.color.g, sparklesImage.color.b, val);
+    }
+
+    private void NotifyProgressManager() {
+        progressManager.SetCanProgress(true);
     }
 }

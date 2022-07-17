@@ -15,7 +15,7 @@ public class CountGuessManager : MonoBehaviour {
     [SerializeField] protected TMP_Text numberText;
 
     [SerializeField] private GameObject dicePopupPrefab;
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject diceParent;
     [SerializeField] private Vector3 dicePopupPos;
     #endregion
 
@@ -43,12 +43,10 @@ public class CountGuessManager : MonoBehaviour {
     protected virtual void Update() {
         // Handle player input
         if (Input.GetKeyDown(KeyCode.Space)) {
-            if (!gameStarted) {
+            if (!gameStarted) 
                 StartGame();
-                return;
-            }
-            
-            OnNumberChosen();
+            else if (!gameOver) 
+                OnNumberChosen();
         }
     }
 
@@ -95,7 +93,7 @@ public class CountGuessManager : MonoBehaviour {
 
     private void DisplayDicePopup() {
         GameObject popup = Instantiate(dicePopupPrefab, dicePopupPos, Quaternion.identity);
-        popup.transform.SetParent(canvas.transform, false);
+        popup.transform.SetParent(diceParent.transform, false);
         popup.GetComponent<DieFacePopup>().Initialize(finalNumber);
     }
     #endregion

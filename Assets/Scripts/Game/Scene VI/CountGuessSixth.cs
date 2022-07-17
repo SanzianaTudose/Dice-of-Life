@@ -9,13 +9,14 @@ public class CountGuessSixth : MonoBehaviour {
     public static event Action StartGame = delegate { };
     public static event Action StopGame = delegate { };
     private bool gameStarted = false;
+    private bool gameOver = false;
 
     [SerializeField] private Row[] rows;
     private int finalNumber;
 
     #region UI Vars
     [SerializeField] private GameObject dicePopupPrefab;
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject dicePopupParent;
     [SerializeField] private Vector3 dicePopupPos;
     #endregion
 
@@ -29,10 +30,13 @@ public class CountGuessSixth : MonoBehaviour {
                 return;
             }
 
-            StopGame();
-            
-            DetermineFinalNumber();
-            DisplayDicePopup();
+            if (!gameOver) {
+                gameOver = true;
+                StopGame();
+
+                DetermineFinalNumber();
+                DisplayDicePopup();
+            }
         }
     }
 
@@ -63,7 +67,7 @@ public class CountGuessSixth : MonoBehaviour {
 
     private void DisplayDicePopup() {
         GameObject popup = Instantiate(dicePopupPrefab, dicePopupPos, Quaternion.identity);
-        popup.transform.SetParent(canvas.transform, false);
+        popup.transform.SetParent(dicePopupParent.transform, false);
         popup.GetComponent<DieFacePopup>().Initialize(finalNumber);
     }
 }
