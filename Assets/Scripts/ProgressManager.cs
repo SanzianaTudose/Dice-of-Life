@@ -58,9 +58,13 @@ public class ProgressManager : MonoBehaviour {
             return;
         }
 
-        FadeOut(curScene, curScene.buildIndex + 1);
+        // For EndingScenes => Instead of LoadingNextScene, restart game
+        if (SceneManager.GetActiveScene().name == "6_BadEnd" ||
+            SceneManager.GetActiveScene().name == "6_GoodEnd") {
+            return;
+        }
 
-        // TODO: daca e last scene => restart whole game
+        FadeOut(curScene, curScene.buildIndex + 1);
     }
 
     #region UI Methods
