@@ -51,6 +51,8 @@ public class ProgressManager : MonoBehaviour {
 
         // TODO: if (SceneManager.GetActiveScene().name == "5_PetruDecision")
         // determine roll based on Dice of Life
+
+        // TODO: daca e last scene => restart whole game
     }
 
     #region UI Methods
