@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour {
         StartCoroutine(CoTypeSentence(sentence));
     }
 
-    private IEnumerator CoTypeSentence (string sentence) {
+    private IEnumerator CoTypeSentence(string sentence) {
         isTyping = true;
         
         dialogueText.text = "";
@@ -75,10 +75,11 @@ public class DialogueManager : MonoBehaviour {
         isTyping = false;
 
         if (dialogue.Count == 0)
-            EndDialogue();
+            StartCoroutine(CoEndDialogue());
     }
 
-    private void EndDialogue() {
+    private IEnumerator CoEndDialogue() {
+        yield return null;
         progressManager.SetCanProgress(true);
     }
 }
