@@ -44,4 +44,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/CountGuess (VI).unity
     guid: a64f300e9baae7948909ff9fd000539d
+  - enabled: 1
+    path: Assets/Scenes/Story/Story (VII).unity
+    guid: 7f7c2b94c003322459da6509fdc2cc0c
+  - enabled: 1
+    path: Assets/Scenes/Game/CountGuess (VII).unity
+    guid: 16dea5a49266c0448917f1b55159de13
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/1_StoryDeath.unity
+    guid: 181d5ffe099b54147972006ad547df5f
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/2_Petru.unity
+    guid: 38c79046bd4e25d408a7c0612c700e49
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/3_DiceOfLife.unity
+    guid: 54e5fe243c7d5f44c9feb1d75d03a147
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/4_Elder.unity
+    guid: e7a688f9d8b453847b95667df0aa0229
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/5_PetruDecision.unity
+    guid: e3f4ea8a25867ca4ab4373f2e275484e
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/6_BadEnd.unity
+    guid: fe7881e74162a19489e612a89c473172
+  - enabled: 1
+    path: Assets/Scenes/AfterStory/6_GoodEnd.unity
+    guid: ec88347ba4effb34e85bae3094d6f38f
   m_configObjects: {}
