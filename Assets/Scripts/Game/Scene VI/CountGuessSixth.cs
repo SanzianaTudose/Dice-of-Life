@@ -16,7 +16,7 @@ public class CountGuessSixth : MonoBehaviour {
 
     #region UI Vars
     [SerializeField] private GameObject dicePopupPrefab;
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject dicePopupParent;
     [SerializeField] private Vector3 dicePopupPos;
     #endregion
 
@@ -67,7 +67,7 @@ public class CountGuessSixth : MonoBehaviour {
 
     private void DisplayDicePopup() {
         GameObject popup = Instantiate(dicePopupPrefab, dicePopupPos, Quaternion.identity);
-        popup.transform.SetParent(canvas.transform, false);
+        popup.transform.SetParent(dicePopupParent.transform, false);
         popup.GetComponent<DieFacePopup>().Initialize(finalNumber);
     }
 }
