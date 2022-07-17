@@ -641,6 +641,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.5568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.24705882
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
 --- !u!224 &495426992 stripped
@@ -892,11 +904,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4392436350653058899, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
       propertyPath: m_fontSize
-      value: 37.1
+      value: 17.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058899, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.5568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058899, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058899, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.24705882
       objectReference: {fileID: 0}
     - target: {fileID: 4392436350653058899, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
       propertyPath: m_enableAutoSizing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392436350653058899, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4287513407
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca106a6395ede143b4c19e2da64b164, type: 3}
