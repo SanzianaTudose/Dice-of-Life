@@ -651,6 +651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1664215127}
     m_Modifications:
+    - target: {fileID: 1956957175711487603, guid: f4fdbd09b3396ca4d868bb3799436e43, type: 3}
+      propertyPath: typeWaitTimeFast
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1956957175711487612, guid: f4fdbd09b3396ca4d868bb3799436e43, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -939,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134217124466557265, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7247c1cfc991b4b4580d2adda04125da, type: 3}
