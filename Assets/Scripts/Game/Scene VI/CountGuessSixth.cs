@@ -9,6 +9,7 @@ public class CountGuessSixth : MonoBehaviour {
     public static event Action StartGame = delegate { };
     public static event Action StopGame = delegate { };
     private bool gameStarted = false;
+    private bool gameOver = false;
 
     [SerializeField] private Row[] rows;
     private int finalNumber;
@@ -29,10 +30,13 @@ public class CountGuessSixth : MonoBehaviour {
                 return;
             }
 
-            StopGame();
-            
-            DetermineFinalNumber();
-            DisplayDicePopup();
+            if (!gameOver) {
+                gameOver = true;
+                StopGame();
+
+                DetermineFinalNumber();
+                DisplayDicePopup();
+            }
         }
     }
 
