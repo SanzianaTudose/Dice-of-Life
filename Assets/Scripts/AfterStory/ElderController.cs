@@ -5,7 +5,7 @@ using UnityEngine;
 public class ElderController : MonoBehaviour {
     private const string FACE_COUNT = "FACE_COUNT";
     private const string FACE_VAL = "FACE_VAL";
-    private const string LAST_ROLL = "LAST_ROLL";
+    private const string FINAL_ROLL = "FINAL_ROLL";
 
     private List<int> faces;
 
@@ -14,6 +14,7 @@ public class ElderController : MonoBehaviour {
     void Start() {
         MakeFacesList();
         RemoveSmallestFace();
+        DetermineFinalRoll();
     }
 
     public void StartDiceDisplay() {
@@ -53,12 +54,22 @@ public class ElderController : MonoBehaviour {
 
     private void DetermineFinalRoll() {
         // Determine minimum face
+        int minVal = 7;
+        foreach (var face in faces)
+            minVal = Mathf.Min(face, minVal);
 
-        // 6 => 100%
-        // altfel min * 5 daca exista un 6
-        // no 6 => hell
+        int finalRoll = -1;
+        if (minVal == 6)
+            finalRoll = 6;
+        else {
+            int rand = Random.Range(1, 101);
+            if (rand > minVal * 5)
+                finalRoll = minVal;
+            else
+                finalRoll = 6;
+        }
 
-        // add it to playerprefs
+        PlayerPrefs.SetInt(FINAL_ROLL, finalRoll);
     }
     #endregion
 }
