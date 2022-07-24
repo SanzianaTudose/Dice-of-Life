@@ -42,10 +42,8 @@ public class ProgressManager : MonoBehaviour {
         if (!canProgress) return;
 
         Scene curScene = SceneManager.GetActiveScene();
-        if (curScene.buildIndex + 1 >= SceneManager.sceneCountInBuildSettings) {
-            Debug.LogError("ProgressManager: There's no next scene!");
+        if (curScene.buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
             return;
-        }
 
         HandleChangingMusic(curScene);
 
